@@ -8,14 +8,7 @@ import plotly.express as px
 from PIL import Image
 
 # Setting up page configuration
-#icon = Image.open("C:\Users\Inbaraja\Desktop\airbnb.jpg")
-st.set_page_config(page_title= "Airbnb Data Visualization | By Jafar Hussain",
-                   #page_icon= icon,
-                   layout= "wide",
-                   initial_sidebar_state= "expanded",
-                   menu_items={'About': """# This dashboard app is created by *Jafar Hussain*!
-                                        Data has been gathered from mongodb atlas"""}
-                  )
+st.title("AIRBNB ANALYSIS")
 
 # Creating option menu in the side bar
 with st.sidebar:
@@ -37,8 +30,7 @@ df = pd.read_csv('Airbnb_data.csv')
 
 # HOME PAGE
 if selected == "Home":
-    # Title Image
-    #st.image("title.png")
+   
     col1,col2 = st.columns(2,gap= 'medium')
     col1.markdown("## :blue[Domain] : Travel Industry, Property Management and Tourism")
     col1.markdown("## :blue[Technologies used] : Python, Pandas, Plotly, Streamlit, MongoDB")
